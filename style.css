@@ -1,6 +1,6 @@
 *{
     margin: 0;
-    padding: 20;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'poppins',sans-serif;
     text-decoration: dashed;
@@ -91,7 +91,7 @@ span{
 .btn-box{
     width: 345px;
     display: flex;
-    gap: 2me;
+    gap: 2rem;
 }
 .btn-1{
     padding: 15px 28px;
@@ -135,7 +135,9 @@ span{
 }
 .about-img img{
     position: relative;
-    width: 550px;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
     box-shadow: 0 0 25px blueviolet,
                 0 0 50px blueviolet;
     border-radius: 50%;            
@@ -206,6 +208,7 @@ span{
     border: 2px solid blueviolet;
     width: 40px;
     height: 40px;
+    /* type: solid; */
     line-height: 38px;
     display: inline-block;
     text-align: center;
@@ -245,6 +248,52 @@ span{
     padding: 0 15px ;
 }
 
-/* .footer .copyright{
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        gap: 3rem;
+        padding: 20px;
+    }
 
-} */
+    .home-content h1 {
+        font-size: 40px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        padding: 15px 5%;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        display: block;
+    }
+
+    .home-content h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .btn-box {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .img-box img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
